@@ -1,7 +1,7 @@
 {
   "name": "cs-312-miniproject-3",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.1",
+    "nodemon": "^3.1.7",
     "pg": "^8.13.0"
   }
 }
