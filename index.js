@@ -20,6 +20,10 @@ app.get('/login', (req, res) =>{
     res.status(200).render('login');
 });
 
+app.get('/blogs', (req, res) =>{
+    res.send('Blogs page');
+});
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
