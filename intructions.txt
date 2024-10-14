@@ -1,0 +1,54 @@
+Step 3: Create the Database and the Tables for blogs and users and Populate the tables
+
+    Create the database where all your tables for this project will reside (Hint: use pgAdmin).
+    Name the database appropriately (e.g., 'BlogDB').
+    Inside the newly created database, create a table named 'blogs' with the following columns:
+        blog_id (Primary Key, Type: Serial),
+        creator_name (Type: Varchar(255)),
+        creator_user_id (Foreign Key, Type: Varchar(255)),
+        title (Type: Varchar(255)),
+        body (Type: Text),
+        date_created (Type: Timestamp), and
+        other columns if needed.
+    Create another table named 'users' with the following columns:
+        user_id (Primary Key, Type: Serial),
+        password (Type: Varchar(255)),
+        name (Type: Varchar(255)), and
+        other columns as needed.
+    Insert at least 5 custom blog entries with meaningful values (titles, bodies, creator names, dates of creation) into the blogs table so that when the app launches for the first time, the blog feed will display these initial entries (Hint: use pgAdmin).
+    Insert at least 3 custom user entries with custom values (user ID, password, name) into the users table so that when the app launches for the first time, any of this user_id and password combinations can be used to sign in (Hint: use pgAdmin).
+
+Step 4: Signup and Sign in
+
+    Create 2 pages using EJS: one for signing up a new account and the other for signing into an existing account.
+    The signup page should contain a form with inputs for user_id, password, name, and other details if needed.
+    The sign-in page should contain a form with inputs for user_id and password.
+    When the user tries to sign up, check the users table to see if the user_id is already taken. If the user_id is taken, the user should be prompted to sign up using a different user_id. Otherwise, insert the new user information into the users table using an SQL INSERT statement, and redirect the user to the signin page.
+    When the user tries to sign in, check if the provided user_id and password pair match any record in the users table using SQL SELECT with WHERE statement. If there is no match, the user should be prompted to enter his correct user_id and password. Otherwise, the user should be redirected to the blog feed page.
+
+Step 5: Post Creation
+
+    Recall that you previously created a form on the homepage for users to create new blog posts.
+    Now, when a user submits a new blog post via this form, ensure that the data is correctly parsed and inserted into the blogs table using an SQL INSERT statement.
+
+Step 6: Post Viewing
+
+    Retrieve all blog posts from the database using an SQL SELECT statement and display them on the homepage using EJS.
+    Ensure that each post shows the title, content, creator's name, time of creation, and other information, along with edit and delete options.
+
+Step 7: Post Editing
+
+    Recall that you previously implemented an edit form where users can load the existing post, modify it, and save the updated post.
+    Now, when a user submits changes through the form, ensure that the blog post is updated in the database using an SQL UPDATE statement. The changes should be reflected on the blog feed after submission.
+    Ensure that the user can edit only the posts they have created themselves (by comparing the current user's user_id and the blog creator's user_id).
+
+Step 8: Post Deletion
+
+    Recall that you previously implemented a delete feature where users can remove a post by clicking a button.
+    Now, when a user deletes a blog, ensure that the blog post is deleted permanently from the database using an SQL DELETE statement. The changes should be reflected on the blog feed after submission.
+    Ensure that the user can edit only the posts they have created themselves (by comparing the current user's user_id and the blog creator's user_id).
+
+Step 9: Styling
+
+    Style the application using CSS or a CSS framework like Bootstrap. Make sure the layout is responsive and looks good on both desktop and mobile devices.
+    Style elements such as the post list, forms, buttons, and layout.
