@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUpPage</title>
+    <title>login</title>
 </head>
 <body>
-    <div id="SignUpForm">
-        <form action="/signUp" method="POST">
+    <div id="loginForm">
+        <form id="login">
             <input type="text" name="username" placeholder="Username" required>
             <br>
             <input type="password" name="password" placeholder="Password" required>
             <br>
-            <input type="text" name="name" placeholder="Name" required>
-            <br>
-            <input type="submit" value="SignUp">
+            <input type="submit" value="Login">
         </form>
     </div>
-    <br>
-    <div id="login">
-        <a href="/SignIn">Already have an account? Click here to sign in!</a>
+    <div>
+        <a href="/SignUp">Don't have an account? Click here to sign up!</a>
     </div>
 </body>
 </html>
