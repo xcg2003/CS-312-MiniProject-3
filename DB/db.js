@@ -20,3 +20,5 @@ pool.connect()
     .finally(() => {
         pool.end(); // Close the connection
     });
+
+export default pool;
